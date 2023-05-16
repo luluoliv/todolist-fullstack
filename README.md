@@ -1,6 +1,6 @@
 # TodoList Fullstack
 
-Este é um projeto de lista de tarefas (TodoList) com uma aplicação fullstack desenvolvida usando tecnologias como Node.js, JavaScript, HTML e CSS.
+Este é um projeto de lista de tarefas (TodoList) com uma aplicação fullstack desenvolvida usando tecnologias como Node.js, Docker, JavaScript, HTML e CSS.
 
 ## Funcionalidades
 
