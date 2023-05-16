@@ -19,7 +19,7 @@ export function MainPage() {
         event.preventDefault();
         const task = { title: inputTask };
 
-        const response = await fetch("http://localhost:3333/tasks", {
+        await fetch("http://localhost:3333/tasks", {
             method: "post",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(task),
@@ -30,7 +30,7 @@ export function MainPage() {
     };
 
     const deleteTask = async (id) => {
-        const response = await fetch(`http://localhost:3333/tasks/${id}`, {
+        await fetch(`http://localhost:3333/tasks/${id}`, {
             method: "delete",
         });
 
@@ -38,11 +38,12 @@ export function MainPage() {
     };
 
     const updateTask = async ({ id, title, status }) => {
-        const response = await fetch("http://localhost:3333/tasks", {
+        await fetch(`http://localhost:3333/tasks/${id}`, {
             method: "post",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ title, status }),
         });
+
         fetchTasks();
     };
 
@@ -55,8 +56,13 @@ export function MainPage() {
 
     return (
         <main>
-            <form className="add-form">
-                <input type="text" placeholder="Add task"></input>
+            <form className="add-form" onSubmit={addTasks}>
+                <input
+                    type="text"
+                    placeholder="Add task"
+                    onChange={(e) => setInputTask(e.target.value)}
+                    value={inputTask}
+                ></input>
                 <button type="submit">+</button>
             </form>
 
@@ -70,27 +76,50 @@ export function MainPage() {
                     </tr>
                 </thead>
                 <tbody className="task-table">
-                    {/* <tr>
-                        <td>Task title</td>
-                        <td>date</td>
-                        <td>
-                            <select>
-                                
-                            </select>
-                        </td>
-                        <td>
-                            <button className="btn-action">
-                                <span className="material-symbols-outlined">
-                                    edit
-                                </span>
-                            </button>
-                            <button className="btn-action">
-                                <span className="material-symbols-outlined">
-                                    delete
-                                </span>
-                            </button>
-                        </td>
-                    </tr> */}
+                    {tasks.map((task) => (
+                        <tr key={task.id}>
+                            <td>{task.title}</td>
+                            <td>{formatDate(task.created_at)}</td>
+                            <td>
+                                <select
+                                    value={task.status}
+                                    onChange={(e) =>
+                                        updateTask({
+                                            id: task.id,
+                                            title: task.title,
+                                            status: e.target.value,
+                                        })
+                                    }
+                                >
+                                    <option value={"pending"}>pending</option>
+                                    <option value={"in progress"}>
+                                        in progress
+                                    </option>
+                                    <option value={"completed"}>
+                                        completed
+                                    </option>
+                                </select>
+                            </td>
+                            <td>
+                                <button
+                                    className="btn-action"
+                                    onClick={() => updateTask(task.title)}
+                                >
+                                    <span className="material-symbols-outlined">
+                                        edit
+                                    </span>
+                                </button>
+                                <button
+                                    className="btn-action"
+                                    onClick={() => deleteTask(task.id)}
+                                >
+                                    <span className="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </main>
