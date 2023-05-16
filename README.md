@@ -30,9 +30,9 @@ npm install
 
 ```
 cd backend
-´´´
+```
 
 
 ```
 npm run dev
-´´´
+```
