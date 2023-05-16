@@ -16,18 +16,23 @@ Este é um projeto de lista de tarefas (TodoList) com uma aplicação fullstack 
 ## Configuração
 
 ```
-git clone https://github.com/luluoliv/todolist-fullstack.git```
+git clone https://github.com/luluoliv/todolist-fullstack.git
+```
 
 ```bash
-npm todolist-fullstack```
+npm todolist-fullstack
+```
 
 ```bash
-npm install```
-
-
-```bash
-cd backend/´´´
+npm install
+```
 
 
 ```bash
-npm run dev´´´
+cd backend/
+´´´
+
+
+```bash
+npm run dev
+´´´
