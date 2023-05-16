@@ -28,11 +28,11 @@ npm install
 ```
 
 
-```bash
-cd backend/
+```
+cd backend
 ´´´
 
 
-```bash
+```
 npm run dev
 ´´´
