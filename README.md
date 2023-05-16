@@ -1,19 +1,19 @@
 # TodoList Fullstack
 
-Este é um projeto de lista de tarefas (TodoList) com uma aplicação fullstack desenvolvida usando tecnologias como Node.js, Docker, JavaScript, HTML e CSS.
+This is a to-do list project (TodoList) with a fullstack application developed using technologies such as Node.js, Docker, JavaScript, HTML and CSS.
 
-## Funcionalidades
+## Functionalities
 
-- Adicionar uma nova tarefa à lista.
-- Marcar uma tarefa como concluída, em andamento ou pendente.
-- Editar o título de uma tarefa.
-- Excluir uma tarefa da lista.
+- Add a new task to the list.
+- Mark a task as completed, in progress or pending.
+- Edit the title of a task.
+- Delete a task from the list.
 
-## Pré-requisitos
+## Prerequisites
 
 - Node.js (v18.15.0)
 - Docker (v23.0.5)
-## Configuração
+## Settings
 
 1. Clone the repository:
 ```
@@ -43,5 +43,5 @@ docker run -p 3333:3333 -d todolist-app
 ## Contributing
 
 
-## Acknowledgements
+## Acknowledgments
 This project was developed as part of a learning experience.
