@@ -12,7 +12,7 @@ Este é um projeto de lista de tarefas (TodoList) com uma aplicação fullstack 
 ## Pré-requisitos
 
 - Node.js (v18.15.0)
-
+- Docker (v23.0.5)
 ## Configuração
 
 1. Clone o repositório:
