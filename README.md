@@ -15,7 +15,7 @@ Este é um projeto de lista de tarefas (TodoList) com uma aplicação fullstack 
 - Docker (v23.0.5)
 ## Configuração
 
-```bash
+```
 git clone https://github.com/luluoliv/todolist-fullstack.git```
 
 ```bash
