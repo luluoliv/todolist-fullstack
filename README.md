@@ -15,24 +15,33 @@ Este é um projeto de lista de tarefas (TodoList) com uma aplicação fullstack 
 - Docker (v23.0.5)
 ## Configuração
 
+1. Clone the repository:
 ```
 git clone https://github.com/luluoliv/todolist-fullstack.git
 ```
 
+2. Change into the project directory:
 ```bash
-npm todolist-fullstack
+cd todolist-fullstack
 ```
 
+3. Build the Docker image:
 ```bash
-npm install
+docker build -t todolist-app .
 ```
 
+4. Run the Docker container:
+```
+docker run -p 3333:3333 -d todolist-app
+```
+## Usage
+- To add a task, enter the title in the input field and click the "Add Task" button.
+- To update the status of a task, select the desired status from the dropdown menu in the corresponding task row.
+- To edit a task, click the "Edit" button, update the title in the input field, and press Enter.
+- To delete a task, click the "Delete" button in the corresponding task row.
 
-```
-cd backend
-```
+## Contributing
 
 
-```
-npm run dev
-```
+## Acknowledgements
+This project was developed as part of a learning experience.
