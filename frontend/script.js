@@ -1,6 +1,6 @@
 const tbody = document.querySelector(".task-table");
 const addForm = document.querySelector(".add-form");
-const inputTask = document.querySelector("input");
+const inputTask = document.querySelector(".input-task");
 
 const fetchTasks = async () => {
     const response = await fetch("http://localhost:3333/tasks");
@@ -33,7 +33,7 @@ const deleteTask = async (id) => {
 
 const updateTask = async ({ id, title, status }) => {
     await fetch(`http://localhost:3333/tasks/${id}`, {
-        method: "post",
+        method: "put",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, status }),
     });
